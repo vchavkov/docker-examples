@@ -35,13 +35,9 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
-  'ghost/*':
+  'ghost*':
       access: $all
       publish: $all
-
-  'ghost-admin/*':
-    access: $all
-    publish: $all
 
   '@*/*':
     # scoped packages

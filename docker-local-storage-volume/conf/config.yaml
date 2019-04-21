@@ -11,7 +11,9 @@
 #
 
 # path to a directory with all packages
+
 storage: /verdaccio/storage
+max_body_size: 1000mb
 
 auth:
   htpasswd:
@@ -37,15 +39,15 @@ uplinks:
 packages:
   'ghost':
       access: $all
-      publish: $all
+      publish: $authenticated
 
   'ghost-admin':
       access: $all
-      publish: $all
+      publish: $authenticated
 
   'ghost-cli':
       access: $all
-      publish: $all
+      publish: $authenticated
 
   '@*/*':
     # scoped packages
@@ -75,5 +77,6 @@ middlewares:
 
 # log settings
 logs:
-  - {type: stdout, format: pretty, level: trace}
-  #- {type: file, path: verdaccio.log, level: info}
+  #- {type: stdout, format: json, level: debug}
+  #- {type: stdout, format: pretty, level: trace}
+  - {type: file, path: verdaccio.log, level: info}

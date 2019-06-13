@@ -78,6 +78,6 @@ middlewares:
 
 # log settings
 logs:
-  - {type: stdout, format: json, level: debug}
-  #- {type: stdout, format: pretty, level: trace}
-  #- {type: file, path: verdaccio.log, level: info}
+  # - {type: stdout, format: json, level: debug}
+  # - {type: stdout, format: pretty, level: trace}
+  - {type: file, path: verdaccio.log, level: info}

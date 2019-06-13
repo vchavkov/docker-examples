@@ -41,20 +41,20 @@ packages:
 
   'ghost':
       access: $all
-      publish: $authenticated
+      publish: $all
 
   'ghost-admin':
       access: $all
-      publish: $authenticated
+      publish: $all
 
   'ghost-cli':
       access: $all
-      publish: $authenticated
+      publish: $all
 
   '@*/*':
       # scoped packages
       access: $all
-      publish: $authenticated
+      publish: $all
 
   '**':
       # allow all users (including non-authenticated users) to read and

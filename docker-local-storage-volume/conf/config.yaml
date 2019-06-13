@@ -14,7 +14,10 @@
 
 storage: /verdaccio/storage
 max_body_size: 1000mb
+<<<<<<< HEAD
 no_proxy: localhost,127.0.0.1
+=======
+>>>>>>> 2ebbbb4791277a889ca41e617ba15e20f1c04729
 
 auth:
   htpasswd:

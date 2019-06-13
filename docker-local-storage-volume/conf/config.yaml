@@ -13,11 +13,8 @@
 # path to a directory with all packages
 
 storage: /verdaccio/storage
-max_body_size: 1000mb
-<<<<<<< HEAD
+max_body_size: 100mb
 no_proxy: localhost,127.0.0.1
-=======
->>>>>>> 2ebbbb4791277a889ca41e617ba15e20f1c04729
 
 auth:
   htpasswd:
@@ -75,12 +72,12 @@ packages:
       proxy: npmjs
 
 # To use `npm audit` uncomment the following section
-#middlewares:
-#  audit:
-#    enabled: true
+middlewares:
+  audit:
+    enabled: true
 
 # log settings
 logs:
-  #- {type: stdout, format: json, level: debug}
+  - {type: stdout, format: json, level: debug}
   #- {type: stdout, format: pretty, level: trace}
-  - {type: file, path: verdaccio.log, level: info}
+  #- {type: file, path: verdaccio.log, level: info}

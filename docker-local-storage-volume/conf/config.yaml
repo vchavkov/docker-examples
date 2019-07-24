@@ -57,7 +57,7 @@ packages:
       # scoped packages
       access: $all
       publish: $all
-      proxy: npmjs
+      proxy: 'none'
 
   'ghost*':
       access: $all

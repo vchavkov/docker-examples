@@ -13,7 +13,7 @@
 # path to a directory with all packages
 
 storage: /verdaccio/storage
-max_body_size: 100mb
+max_body_size: 1G
 no_proxy: localhost,127.0.0.1
 
 auth:
@@ -21,7 +21,7 @@ auth:
     file: /verdaccio/conf/htpasswd
     # Maximum amount of users allowed to register, defaults to "+inf".
     # You can set this to -1 to disable registration.
-    #max_users: 1000
+    max_users: 100
 security:
   api:
     jwt:
@@ -38,25 +38,6 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
-
-  'ghost':
-      access: $all
-      publish: $all
-
-  'ghost-admin':
-      access: $all
-      publish: $all
-
-  'ghost-cli':
-      access: $all
-      publish: $all
-
-  '@*/*':
-      # scoped packages
-      access: $all
-      publish: $all
-      proxy: npmjs
-
   '**':
       # allow all users (including non-authenticated users) to read and
       # publish all packages
@@ -71,6 +52,27 @@ packages:
 
       # if package is not available locally, proxy requests to 'npmjs' registry
       proxy: npmjs
+
+  '@*/*':
+      # scoped packages
+      access: $all
+      publish: $all
+      proxy: npmjs
+
+  'ghost':
+      access: $all
+      publish: $all
+      proxy: 'none'
+
+  'ghost-admin':
+      access: $all
+      publish: $all
+      proxy: 'none'
+
+  'ghost-cli':
+      access: $all
+      publish: $all
+      proxy: 'none'
 
 # To use `npm audit` uncomment the following section
 middlewares:

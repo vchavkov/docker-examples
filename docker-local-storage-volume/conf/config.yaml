@@ -51,28 +51,24 @@ packages:
       publish: $all
 
       # if package is not available locally, proxy requests to 'npmjs' registry
-      proxy: npmjs
+      # proxy: npmjs
 
   '@*/*':
       # scoped packages
       access: $all
       publish: $all
-      proxy: 'none'
 
   'ghost*':
       access: $all
       publish: $all
-      proxy: 'none'
 
   'ghost-admin*':
       access: $all
       publish: $all
-      proxy: 'none'
 
   'ghost-cli*':
       access: $all
       publish: $all
-      proxy: 'none'
 
 # To use `npm audit` uncomment the following section
 middlewares:

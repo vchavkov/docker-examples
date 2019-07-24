@@ -13,7 +13,7 @@
 # path to a directory with all packages
 
 storage: /verdaccio/storage
-max_body_size: 1G
+max_body_size: 1024mb
 no_proxy: localhost,127.0.0.1
 
 auth:
@@ -72,7 +72,6 @@ packages:
   'ghost-cli':
       access: $all
       publish: $all
-      proxy: 'none'
 
 # To use `npm audit` uncomment the following section
 middlewares:

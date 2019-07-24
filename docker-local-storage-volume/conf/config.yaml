@@ -59,19 +59,20 @@ packages:
       publish: $all
       proxy: npmjs
 
-  'ghost':
+  'ghost*':
       access: $all
       publish: $all
       proxy: 'none'
 
-  'ghost-admin':
+  'ghost-admin*':
       access: $all
       publish: $all
       proxy: 'none'
 
-  'ghost-cli':
+  'ghost-cli*':
       access: $all
       publish: $all
+      proxy: 'none'
 
 # To use `npm audit` uncomment the following section
 middlewares:

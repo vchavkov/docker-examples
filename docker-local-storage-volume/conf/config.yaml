@@ -33,9 +33,9 @@ security:
       expiresIn: 7d
 
 # a list of other known repositories we can talk to
-uplinks:
-  npmjs:
-    url: https://registry.npmjs.org/
+# uplinks:
+#   npmjs:
+#     url: https://registry.npmjs.org/
 
 packages:
   '**':
